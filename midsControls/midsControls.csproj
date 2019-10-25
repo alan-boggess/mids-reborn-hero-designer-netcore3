@@ -1,0 +1,68 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblyTitle>midsControls</AssemblyTitle>
+    <Company>RebornTeam</Company>
+    <Product>MidsContext.AppName</Product>
+    <Copyright>Noner</Copyright>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+    <NoWarn />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="ctlDamageDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ctlMultiGraph.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ctlPairedList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ctlPopUp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GFXLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="I9Picker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ImageButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ListLabelV2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ctlDamageDisplay.resources" />
+    <EmbeddedResource Include="ctlMultiGraph.resources" />
+    <EmbeddedResource Include="ctlPairedList.resources" />
+    <EmbeddedResource Include="ctlPopUp.resources" />
+    <EmbeddedResource Include="GFXLabel.resources" />
+    <EmbeddedResource Include="I9Picker.resources" />
+    <EmbeddedResource Include="ImageButton.resources" />
+    <EmbeddedResource Include="ListLabelV2.resources" />
+    <EmbeddedResource Include="Resources.resources" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Base\Base.csproj" />
+  </ItemGroup>
+
+</Project>
