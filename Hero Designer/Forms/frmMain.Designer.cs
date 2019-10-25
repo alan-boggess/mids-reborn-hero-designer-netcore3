@@ -1961,7 +1961,7 @@ namespace Hero_Designer
             this.ibPopup.ButtonClicked += new midsControls.ImageButton.ButtonClickedEventHandler(ibPopup_ButtonClicked);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1156, 772);
+            this.ClientSize = new System.Drawing.Size(1156, 872);
             this.Controls.Add(this.heroVillain);
             this.Controls.Add(this.petsButton);
             this.Controls.Add(this.tempPowersButton);
@@ -2022,7 +2022,8 @@ namespace Hero_Designer
             this.KeyPreview = true;
             this.MainMenuStrip = this.MenuBar;
 
-            this.MinimumSize = new System.Drawing.Size(640, 480);
+            //this.MinimumSize = new System.Drawing.Size(640, 480);
+            this.MinimumSize = new System.Drawing.Size(1024, 869);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             //this.Location = new Point(10, 10);
             this.Text = "Hero Designer";

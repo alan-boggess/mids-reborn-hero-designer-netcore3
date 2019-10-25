@@ -228,6 +228,10 @@ namespace Hero_Designer
                 //AutoUpdater.CheckForUpdateEvent += AutoUpdaterOnCheckForUpdateEvent;
                 if (!this.IsInDesignMode() && !MidsContext.Config.IsInitialized)
                 {
+                    /*Size initialSize = default;
+                    initialSize.Height = 1024;
+                    initialSize.Width = 839;
+                    MidsContext.Config.LastSize = initialSize;*/
                     MidsContext.Config.CheckForUpdates = false;
                     //MessageBox.Show(("Welcome to Mids' Reborn : Hero Designer "
                     //+ MidsContext.AppVersion 
@@ -5242,19 +5246,19 @@ namespace Hero_Designer
             else if (cbAT.SelectedItem.Idx != MidsContext.Character.Archetype.Idx)
                 cbAT.SelectedItem = MidsContext.Character.Archetype;
             ibPvX.Checked = MidsContext.Config.Inc.DisablePvE;
-            var cbOrigin = new ComboBoxT<string>(this.cbOrigin);
+            var cbOrigin2 = new ComboBoxT<string>(this.cbOrigin);
             if (ComboCheckOrigin())
             {
-                cbOrigin.BeginUpdate();
-                cbOrigin.Clear();
-                cbOrigin.AddRange(cbAT.SelectedItem.Origin);
-                cbOrigin.EndUpdate();
+                cbOrigin2.BeginUpdate();
+                cbOrigin2.Clear();
+                cbOrigin2.AddRange(cbAT.SelectedItem.Origin);
+                cbOrigin2.EndUpdate();
             }
 
-            if (cbOrigin.SelectedIndex != MidsContext.Character.Origin)
+            if (cbOrigin2.SelectedIndex != MidsContext.Character.Origin)
             {
-                cbOrigin.SelectedIndex = MidsContext.Character.Origin < cbOrigin.Items.Count ? MidsContext.Character.Origin : 0;
-                I9Gfx.SetOrigin(cbOrigin.SelectedItem);
+                cbOrigin2.SelectedIndex = MidsContext.Character.Origin < cbOrigin2.Items.Count ? MidsContext.Character.Origin : 0;
+                I9Gfx.SetOrigin(cbOrigin2.SelectedItem);
             }
 
             ComboCheckPS(CbtPrimary.Value, Enums.PowersetType.Primary, Enums.ePowerSetType.Primary);
