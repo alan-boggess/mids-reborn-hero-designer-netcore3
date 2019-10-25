@@ -23,17 +23,4 @@ https://twitter.com/midsreborn
 
 #### Windows
 
-   * [.NET 4.7.2](https://dotnet.microsoft.com/download/thank-you/net472)
-
-#### MacOS
-
-   * [Homebrew](https://brew.sh/)  
-   * [Wine](https://www.winehq.org/)  
-   * [Winetricks](https://brewformulas.org/Winetricks)  
-   * .NET 4.7.2 "Install with Winetricks"  
-
-#### Linux
-
-   * [Wine](https://www.winehq.org/)  
-   * [Winetricks](https://github.com/Winetricks/winetricks)  
-   * .NET 4.7.2 "Install with Winetricks"    
+   * [.NETCore 3](https://dotnet.microsoft.com/download/dotnet-core/3.0)
