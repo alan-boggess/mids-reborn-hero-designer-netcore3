@@ -112,6 +112,7 @@ namespace Base.Data_Classes
 
         public bool Domination { get; private set; }
 
+        public bool NotContainment { get; private set; }
         public bool Containment { get; private set; }
 
         public bool Scourge { get; private set; }
@@ -346,6 +347,7 @@ namespace Base.Data_Classes
             Assassination = false;
             CriticalHits = false;
             Containment = false;
+            NotContainment = true;
             Domination = false;
             Scourge = false;
             DefensiveAdaptation = false;
@@ -381,6 +383,7 @@ namespace Base.Data_Classes
             Assassination = false;
             Domination = false;
             Containment = false;
+            NotContainment = true;
             Scourge = false;
             CriticalHits = false;
             Defiance = false;
@@ -445,6 +448,7 @@ namespace Base.Data_Classes
                         break;
                     case "CONTAINMENT":
                         Containment = true;
+                        NotContainment = false;
                         break;
                     case "SCOURGE":
                         Scourge = true;

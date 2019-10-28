@@ -823,20 +823,7 @@ namespace Base.Data_Classes
 
         public List<string> NewEffects = new List<string>()
         {
-            "TrainBeasts",
-            "TameBeasts",
-            "EnchantDemons",
-            "AbyssalEmpowerment",
-            "EquipMercenary",
-            "TacticalUpgrade",
-            "EnchantUndead",
-            "DarkEmpowerment",
-            "TrainNinjas",
-            "KujiInZen",
-            "EquipRobot",
-            "UpgradeRobot",
-            "EquipThugs",
-            "UpgradeEquipment"
+            "Containment"
         };
 
         public void StoreTo(ref BinaryWriter writer)
@@ -1348,6 +1335,10 @@ namespace Base.Data_Classes
                     if (MidsContext.Character.Containment)
                         return true;
                     break;
+                case Enums.eSpecialCase.NotContainment:
+                    if (!MidsContext.Character.Containment)
+                        return true;
+                    break;
                 case Enums.eSpecialCase.Defiance:
                     if (MidsContext.Character.Defiance)
                         return true;
@@ -1570,6 +1561,10 @@ namespace Base.Data_Classes
                     break;
                 case Enums.eSpecialCase.Containment:
                     if (MidsContext.Character.Containment)
+                        return true;
+                    break;
+                case Enums.eSpecialCase.NotContainment:
+                    if (!MidsContext.Character.Containment)
                         return true;
                     break;
                 case Enums.eSpecialCase.Defiance:

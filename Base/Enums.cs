@@ -1157,6 +1157,7 @@ public static class Enums
         Robot,
         Assassination,
         Containment,
+        NotContainment,
         Defiance,
         TargetDroneActive,
         Combo,
